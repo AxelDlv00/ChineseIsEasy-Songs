@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chansons Chinoises — Liseuse Interactive</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="layout">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>Playlist 🎵</h2>
+                <button id="close-sidebar" class="icon-btn" title="Fermer le panneau">✕</button>
+            </div>
+            <ul id="poem-list">
+                <li style="opacity: 0.5;">Chargement des chansons...</li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <div class="top-bar">
+                <button id="open-sidebar" class="menu-btn">☰ Menu</button>
+            </div>
+            <div id="poem-container" class="card hidden">
+                <div id="md-header"></div>
+                <div id="lyrics-container" class="lyrics-grid"></div>
+                <div id="md-content" class="markdown-body"></div>
+            </div>
+            <div id="welcome-message" class="card description">
+                Sélectionnez une chanson dans la barre latérale pour commencer.
+                <br>Survolez les lignes de chant pour voir la prononciation et la traduction.
+            </div>
+        </main>
+    </div>
+    <div id="tooltip" class="tooltip"></div>
+    <script src="script.js"></script>
+</body>
+</html>
